@@ -18,6 +18,7 @@ const CommanUI = () => {
     const [customersCohorts, setCustomersCohorts] = useState([]);
     const [customersonmap, setCustomersonmap] = useState([])
 
+    const API_BASE_URL = process.env.REACT_APP_BACKEND_URL;
   
     useEffect(() => {
       fetchSalesOverTimeData();
@@ -29,7 +30,7 @@ const CommanUI = () => {
     }, []);
   
     const fetchSalesOverTimeData = async () => {
-      axios.get(`http://localhost:4040/salesovertime`)
+      axios.get(`${API_BASE_URL}salesovertime`)
         .then((res) => {
           setSalesOverTime(res.data);
         })
@@ -39,7 +40,7 @@ const CommanUI = () => {
     };
   
     const fetchSalesGrowthOverTime = async () => {
-      axios.get(`http://localhost:4040/salesgrowthovertime`)
+      axios.get(`${API_BASE_URL}salesgrowthovertime`)
         .then((res) => {
           setSalesGrowthOverTime(res.data);
         })
@@ -49,7 +50,7 @@ const CommanUI = () => {
     };
   
     const fetchNewCustomersOverTime = async () => {
-      axios.get(`http://localhost:4040/newcustomersovertime`)
+      axios.get(`${API_BASE_URL}newcustomersovertime`)
         .then((res) => {
           setNewCustomersOverTime(res.data);
         })
@@ -59,7 +60,7 @@ const CommanUI = () => {
     };
   
     const fetchRepeatedCustomersOverTime = async () => {
-      axios.get(`http://localhost:4040/repetedcustomers`)
+      axios.get(`${API_BASE_URL}repetedcustomers`)
         .then((res) => {
           setRepeatedCustomersOverTime(res.data);
         })
@@ -69,7 +70,7 @@ const CommanUI = () => {
     };
   
     const fetchCustomersCohorts = async () => {
-      axios.get(`http://localhost:4040/customerscohorts`)
+      axios.get(`${API_BASE_URL}customerscohorts`)
         .then((res) => {
           setCustomersCohorts(res.data);
         })
@@ -80,7 +81,7 @@ const CommanUI = () => {
     
 
     const fetchCustomersLoacation = async () => {
-      axios.get(`http://localhost:4040/customerslocations`)
+      axios.get(`${API_BASE_URL}customerslocations`)
         .then((res) => {
           setCustomersonmap(res.data);
         })
