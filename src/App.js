@@ -30,7 +30,7 @@ const CommanUI = () => {
     }, []);
   
     const fetchSalesOverTimeData = async () => {
-      axios.get(`${API_BASE_URL}salesovertime`)
+      axios.get(`https://datavisualizationbackend.onrender.com/salesovertime`)
         .then((res) => {
           setSalesOverTime(res.data);
         })
@@ -40,7 +40,7 @@ const CommanUI = () => {
     };
   
     const fetchSalesGrowthOverTime = async () => {
-      axios.get(`${API_BASE_URL}salesgrowthovertime`)
+      axios.get(`https://datavisualizationbackend.onrender.com/salesgrowthovertime`)
         .then((res) => {
           setSalesGrowthOverTime(res.data);
         })
@@ -50,7 +50,7 @@ const CommanUI = () => {
     };
   
     const fetchNewCustomersOverTime = async () => {
-      axios.get(`${API_BASE_URL}newcustomersovertime`)
+      axios.get(`https://datavisualizationbackend.onrender.com/newcustomersovertime`)
         .then((res) => {
           setNewCustomersOverTime(res.data);
         })
@@ -60,7 +60,7 @@ const CommanUI = () => {
     };
   
     const fetchRepeatedCustomersOverTime = async () => {
-      axios.get(`${API_BASE_URL}repetedcustomers`)
+      axios.get(`https://datavisualizationbackend.onrender.com/repetedcustomers`)
         .then((res) => {
           setRepeatedCustomersOverTime(res.data);
         })
@@ -70,7 +70,7 @@ const CommanUI = () => {
     };
   
     const fetchCustomersCohorts = async () => {
-      axios.get(`${API_BASE_URL}customerscohorts`)
+      axios.get(`https://datavisualizationbackend.onrender.com/customerscohorts`)
         .then((res) => {
           setCustomersCohorts(res.data);
         })
@@ -81,7 +81,7 @@ const CommanUI = () => {
     
 
     const fetchCustomersLoacation = async () => {
-      axios.get(`${API_BASE_URL}customerslocations`)
+      axios.get(`https://datavisualizationbackend.onrender.com/customerslocations`)
         .then((res) => {
           setCustomersonmap(res.data);
         })
